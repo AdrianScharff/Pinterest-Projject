@@ -14,18 +14,28 @@
 <body>
     <header>
         <nav class="nav-desk" id="#navbar-pinterest">
-            <a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest pint-icon"></i></a>
+            <a class="h-link" href="https://www.pinterest.com">
+                <div class="h-background h-logo"></div>
+                <i class="fa-brands fa-pinterest pint-icon h-hover"></i>
+            </a>
             <div class="home"><a href="index.html">Home</a></div>
             <div><a href="https://www.pinterest.com">Explore</a></div>
             <div class="create">
                 <a href="https://www.pinterest.com">Create</a>
-                <i class="fa-solid fa-angle-down"></i>
+                <a href=""><i class="fa-solid fa-angle-down"></i></a>
             </div>
-            <input placeholder="🔍 Search" type="text" class="finder">
-            <div class="notifications"><i class="fa-solid fa-bell"></i></div>
-            <div class="message"><i class="fa-solid fa-comment-dots"></i></div>
-            <div class="profile-image"><img src="images/profileAlienCut.png" alt=""></div>
-            <div class="angle-down"><i class="fa-solid fa-angle-down"></i></div>
+            <div class="input-container">
+                <input placeholder="Search" type="text" class="finder">
+                <div class="h-link cross-container">
+                    <div class="h-background h-cross"></div>
+                    <i class="fa-solid fa-circle-xmark cross"></i>
+                </div>
+                <i class="fa-solid fa-magnifying-glass glass"></i>
+            </div>
+            <a class="h-link" href=""><div class="h-background h-icon h-bell"></div><div class="notifications"><i class="fa-solid fa-bell h-hover"></i></div></a>
+            <a class="h-link" href=""><div class="h-background h-icon h-msg"></div><div class="message"><i class="fa-solid fa-comment-dots h-hover"></i></div></a>
+            <a class="h-link" href=""><div class="h-background h-icon h-img"></div><div class="profile-image"><img class="h-hover" src="images/profileAlienCut.png" alt=""></div></a>
+            <a class="h-link" href=""><div class="h-background h-arrow"></div><div class="angle-down"><i class="fa-solid fa-angle-down h-hover"></i></div></a>
         </nav>
         <nav class="nav-mobile">
             <a href="https://www.pinterest.com"><i class="fa-solid fa-tv pint-tv"></i></a>

@@ -37,6 +37,45 @@ a {
     color: black;
 }
 
+.h-link {
+    position: relative;
+}
+
+.h-background {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(241, 241, 241);
+    bottom:-11px;
+    right: -13px;
+    border-radius: 50%;
+    display: none;
+}
+
+.h-icon {
+    background-color: rgb(226, 226, 226);
+}
+
+.h-img {
+    bottom:-8px;
+    right: -11px;
+}
+
+.h-arrow {
+    width: 2rem;
+    height: 2rem;
+    bottom:-4px;
+    right: -9px;
+}
+
+.h-link:hover .h-background {
+    display: block;
+}
+
+.h-hover {
+    position: relative;
+}
+
 .pint-icon {
     color: #E60023;
     font-size: 24px;
@@ -57,17 +96,76 @@ a {
     margin-right: 2px;
 }
 
+.input-container {
+    width: 73%;
+    position: relative;
+}
+
 input {
+    position: relative;
     padding: 1rem;
+    padding-left: 2.5rem;
     background-color: rgb(230, 230, 230);
-    width: 72%;
+    width: 100%;
     height: 50px;
     border: none;
     border-radius: 50px;
 }
 
+.glass {
+    position: absolute;
+    z-index: 1;
+    top: 17px;
+    left: 15px;
+    color: rgb(120, 120, 120);
+}
+
+.cross-container {
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.h-cross {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(216, 216, 216);
+    top: -14.7px;
+    right: -13.5px;
+}
+
+.cross-container i.cross {
+    font-size: 20.5px;
+    position: relative;;
+    z-index: 1;
+}
+
+input:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+input:focus {
+    padding-left: 1rem;
+    outline: 4px solid rgb(124, 200, 255);
+}
+
+input:focus ~ .glass {
+    display: none;
+}
+
+input:focus ~ .cross-container {
+    display: block;
+}
+
 input::placeholder {
     font-size: 16px;
+}
+
+.notifications i, .message i, .angle-down i {
+    color: rgb(88, 88, 88);
 }
 
 .notifications i {
@@ -100,7 +198,6 @@ main {
 
 .card-image {
     height: fit-content;
-    /* background-color: #E60023; */
     position: relative;
     border-radius: 20px;
 }
@@ -130,6 +227,7 @@ button {
     font-size: 17px;
 }
 
+
 .card-image:hover button.send {
     display: block;
     bottom: 15px;
@@ -137,6 +235,7 @@ button {
     padding: 0.5rem 0.6rem;
     border-radius: 50%;
     font-size: 19px;
+    background-color: #ffffffe7;
 }
 
 .card-image:hover button.ellipsis {
@@ -146,6 +245,15 @@ button {
     padding: 0.5rem 0.6rem;
     border-radius: 50%;
     font-size: 19px;
+    background-color: #ffffffe7;
+}
+
+.card-image:hover button.save:hover {
+    background-color: #b6001b;
+}
+
+.card-image:hover button.send:hover, .card-image:hover button.ellipsis:hover {
+    background-color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
